@@ -133,7 +133,6 @@ def delete_book(isbn):
 
 # Get /books/
 @app.route('/books')
-@token_required
 def get_books():
     """This end point returns all books 
 
@@ -142,7 +141,6 @@ def get_books():
 
 # Get /books/89059890298930
 @app.route('/books/<int:isbn>')
-@token_required
 def get_single_books(isbn):
     """This end point returns a single books
 
